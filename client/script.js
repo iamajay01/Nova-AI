@@ -14,7 +14,7 @@ function loader(element) {
         element.textContent += '.';
 
         // If the loading indicator has reached three dots, reset it
-        if (element.textContent === '....') {
+        if (element.textContent === '...') {
             element.textContent = '';
         }
     }, 300);
@@ -101,7 +101,7 @@ const handleSubmit = async (e) => {
 
     if (response.ok) {
         const data = await response.json();
-        const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
+        const parsedData = data.bot.trim()  
 
         typeText(messageDiv, parsedData)
     } else {
